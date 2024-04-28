@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objective: Survive</title>
+        <style>
+            *{
+                margin: 0;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+
+    <body>
+        <canvas id="canv">
+        </canvas>
+
+        <script type="module">
+            import "/ObjectiveGames/engine/Engine.js"
+            import "./scenes/MainScene.js"
+            import "./scenes/DeadScene.js"
+            Globals.score = 0
+            Globals.highScore = 0
+            Globals.highScores = []
+            Engine.currentScene = new MainScene()
+
+            Engine.setup()
+        </script>
+    </body>
+</html>
