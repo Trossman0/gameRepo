@@ -15,8 +15,15 @@
         </canvas>
 
         <script type="module">
+            // windows import
             import "/engine/Engine.js"
+            // apple import 
+            // import "ObjectiveGames/engine/Engine.js"
             import "./scenes/MainScene.js"
+            import "./scenes/DeadScene.js"
+            Globals.score = 0
+            Globals.highScore = 0
+            Globals.highScores = []
             Engine.currentScene = new MainScene()
 
             Engine.setup()

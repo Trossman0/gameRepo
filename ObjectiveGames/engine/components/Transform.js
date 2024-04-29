@@ -3,6 +3,10 @@ class Transform extends Component{
     y = 0
     scaleX = 1
     scaleY = 1
+    xVelocity = 0
+    yVelocity = 0
+    prev_x = 0
+    prev_y = 0
 
     getPositionAsVector2(){
         return new Vector2(this.x, this.y)

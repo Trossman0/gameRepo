@@ -1,10 +1,10 @@
 class CollisionsGeometric{
     static Rectangle2Rectangle2Collision(one, two){
         if (
-        one.centerX - one.width / 2 > two.centerX + two.width / 2 ||
-        one.centerX + one.width / 2 < two.centerX - two.width / 2 ||
-        one.centerY - one.height / 2 > two.centerY + two.height / 2 ||
-        one.centerY + one.height / 2 < two.centerY -  two.height / 2  
+            one.centerX - one.width / 2 > two.centerX + two.width / 2 ||
+            one.centerX + one.width / 2 < two.centerX - two.width / 2 ||
+            one.centerY - one.height / 2 > two.centerY + two.height / 2 ||
+            one.centerY + one.height / 2 < two.centerY -  two.height / 2  
         ){
             return false
         }

@@ -1,27 +1,27 @@
-import "/engine/classes/Component.js"
-import "/engine/classes/GameObject.js"
-import "/engine/classes/Scene.js"
+import "./classes/Component.js"
+import "./classes/GameObject.js"
+import "./classes/Scene.js"
 
-import "/engine/geometry/Vector2.js"
-import "/engine/geometry/Line2.js"
-import "/engine/geometry/Rectangle2.js"
-import "/engine/geometry/Circle2.js"
+import "./geometry/Vector2.js"
+import "./geometry/Line2.js"
+import "./geometry/Rectangle2.js"
+import "./geometry/Circle2.js"
 
-import "/engine/components/Circle.js"
-import "/engine/components/Line.js"
-import "/engine/components/Point.js"
-import "/engine/components/Rectangle.js"
-import "/engine/components/Text.js"
-import "/engine/components/Transform.js"
+import "./components/Circle.js"
+import "./components/Line.js"
+import "./components/Point.js"
+import "./components/Rectangle.js"
+import "./components/Text.js"
+import "./components/Transform.js"
 
-import "/engine/prefabs/Camera.js"
+import "./prefabs/Camera.js"
 
-import "/engine/static/Collisions.js"
-import "/engine/static/CollisionsGeometric.js"
-import "/engine/static/Input.js"
-import "/engine/static/Globals.js"
-import "/engine/static/Time.js"
-import "/engine/static/EventSystem.js"
+import "./static/Collisions.js"
+import "./static/CollisionsGeometric.js"
+import "./static/Input.js"
+import "./static/Globals.js"
+import "./static/Time.js"
+import "./static/EventSystems.js"
 
 class Engine {
 
@@ -49,7 +49,7 @@ class Engine {
 
             Engine.currentScene._start(ctx)
             Engine.currentScene.update(ctx)
-            Engine.currentScene.gameObjects = Engine.currentScene.GameObjects.filter(go=>go.markForDestroy == false)
+            // Engine.currentScene.gameObjects = Engine.currentScene.GameObjects.filter(go=>go.markForDestroy == false)
         }
 
         Input.update()

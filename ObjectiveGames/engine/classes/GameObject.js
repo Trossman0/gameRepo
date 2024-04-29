@@ -4,11 +4,11 @@ class GameObject {
 
     constructor(name){
         this.name = name
-        this.addComponent(new TransformStream())
+        this.addComponent(new Transform())
         this.markForDestroy = false
     }
 
-    get transfrom(){
+    get transform(){
         return this.components[0]
     }
 
@@ -52,7 +52,7 @@ class GameObject {
     static instantiate(gameObject, x=0, y=0, scaleX = 1, scaleY = 1){
         Engine.currentScene.gameObjects.push(gameObject)
         gameObject.transform.x = x
-        gameObject.transfrom.y = y
+        gameObject.transform.y = y
         gameObject.transform.scaleX = scaleX
         gameObject.transform.scaleY = scaleY
     }
