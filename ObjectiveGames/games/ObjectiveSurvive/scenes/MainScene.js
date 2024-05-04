@@ -10,21 +10,23 @@ import "../components/EnemyAI.js"
 import "../components/TimeExtenderComponent.js"
 import "../components/ScoreTextUpdater.js"
 import "../components/EnemySpawner.js"
+import "../components/Lifetime.js"
+import "../components/Boost.js"
 
 class MainScene extends Scene{
     constructor(){
         super("DarkSlateGrey")
-        this.aRatio = 939/1630
-        this.logicalWidth = window.innerWidth
+        this.aRatio = window.innerHeight/window.innerWidth
+        this.logicalWidth = 1000
     }
 
     start(ctx){
         GameObject.instantiate(new Controller())
         GameObject.instantiate(new TimeExtender(), Math.floor(Math.random() * window.innerWidth), Math.floor(Math.random() * window.innerHeight), 25, 25)
         GameObject.instantiate(new TimeExtender(), Math.floor(Math.random() * window.innerWidth), Math.floor(Math.random() * window.innerHeight), 25, 25)
-        GameObject.instantiate(new Player(), window.innerWidth / 2, window.innerHeight / 2, 50, 50)
-        GameObject.instantiate(new TextGameObject("Score: " + Globals.score, "30px Garamond", "white"), 0, 30)
-        GameObject.instantiate(new Enemy(), -50, -50, 50, 50)
+        GameObject.instantiate(new Player(), 0, 0, 50, 50)
+        GameObject.instantiate(new TextGameObject(), 0, 0)
+        GameObject.instantiate(new Enemy(), -1000, -1000, 50, 50)
 
     }
 }

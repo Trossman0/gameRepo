@@ -63,7 +63,7 @@ class Engine {
         document.addEventListener("mouseup", Input.mouseup)
         
         setInterval(Engine.gameLoop, Time.ms)
-    }
+    }  
 }
 
 window.Engine = Engine

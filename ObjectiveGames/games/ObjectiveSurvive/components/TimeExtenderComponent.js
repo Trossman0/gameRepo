@@ -10,8 +10,8 @@ class TimeExtenderComponent extends Component{
         let collision = CollisionsGeometric.Rectangle2Rectangle2Collision(timeE, player)
         if(collision){
             EventSystem.fireEvent({name: "Time Extention", source: this, dest: "PlayerController"})
-            this.transform.x = Math.floor(Math.random() * (ctx.canvas.width - 50))
-            this.transform.y = Math.floor(Math.random() * (ctx.canvas.height - 50))
+            this.transform.x = Math.floor(Math.random() * (ctx.canvas.width))
+            this.transform.y = Math.floor(Math.random() * (ctx.canvas.height))
         }
     }
 }

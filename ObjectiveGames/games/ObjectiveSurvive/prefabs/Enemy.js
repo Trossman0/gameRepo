@@ -4,7 +4,8 @@ class Enemy extends GameObject{
     }
 
     start(ctx){
-        this.addComponent(new Rectangle("Red"))
+        this.access = new Rectangle('Red')
+        this.addComponent(this.access)
         this.addComponent(new EnemyAI())
         super.start()
     }

@@ -9,6 +9,7 @@ class StaticTextGameObject extends GameObject{
 
     start(ctx){
         this.addComponent(new Text(this.text, this.font, this.fill, this.align))
+        this.layer = 5
         super.start()
     }
 }

@@ -10,6 +10,7 @@ class DeadScene extends Scene{
     }
 
     start(ctx){
+        EventSystem.listeners = []
         Globals.highScores.push(Globals.score)
         for(let scr of Globals.highScores){
             if(scr > Globals.highScore){

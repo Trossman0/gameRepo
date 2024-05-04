@@ -13,10 +13,10 @@ class CollisionsGeometric{
 
     static Vector2Rectrangle2Collision(vector2, rect2){
         if(
-            vector2.x > rect2.centerX - this.rect2.width / 2 &&
-            vector2.x < rect2.centerX + this.rect2.width / 2 &&
-            vector2.y > rect2.centerY - this.rect2.height / 2 &&
-            vector2.y < rect2.centerY + this.rect2.height / 2
+            vector2.x > rect2.centerX - rect2.width / 2 &&
+            vector2.x < rect2.centerX + rect2.width / 2 &&
+            vector2.y > rect2.centerY - rect2.height / 2 &&
+            vector2.y < rect2.centerY + rect2.height / 2
         ){
             return true
         }
